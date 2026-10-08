@@ -1,0 +1,696 @@
+{
+  "data_quality": {
+    "total_records": 3500,
+    "total_features": 57,
+    "total_missing_values": 0,
+    "duplicate_records": 0,
+    "outlier_salaries_count": 46,
+    "role_distribution": {
+      "DevOps Engineer": 465,
+      "Frontend Developer": 456,
+      "Business Analyst": 452,
+      "Machine Learning Engineer": 437,
+      "Data Scientist": 430,
+      "Full Stack Developer": 426,
+      "Data Analyst": 418,
+      "Backend Developer": 416
+    },
+    "salary_summary": {
+      "mean": 17.25,
+      "median": 16.95,
+      "std": 3.1,
+      "min": 9.64,
+      "max": 30.43
+    },
+    "experience_summary": {
+      "mean": 0.9,
+      "max": 5.0
+    }
+  },
+  "classification": {
+    "models_evaluated": [
+      {
+        "model_name": "Logistic Regression (Baseline)",
+        "accuracy": 0.9986,
+        "precision": 0.9986,
+        "recall": 0.9986,
+        "f1_score": 0.9986,
+        "confusion_matrix": {
+          "labels": [
+            "Backend Developer",
+            "Business Analyst",
+            "Data Analyst",
+            "Data Scientist",
+            "DevOps Engineer",
+            "Frontend Developer",
+            "Full Stack Developer",
+            "Machine Learning Engineer"
+          ],
+          "matrix": [
+            [
+              82,
+              0,
+              0,
+              0,
+              0,
+              0,
+              1,
+              0
+            ],
+            [
+              0,
+              91,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              84,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              86,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              93,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              91,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              85,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              87
+            ]
+          ]
+        },
+        "per_class_metrics": {
+          "Backend Developer": {
+            "precision": 1.0,
+            "recall": 0.988,
+            "f1_score": 0.9939,
+            "support": 83
+          },
+          "Business Analyst": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1_score": 1.0,
+            "support": 91
+          },
+          "Data Analyst": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1_score": 1.0,
+            "support": 84
+          },
+          "Data Scientist": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1_score": 1.0,
+            "support": 86
+          },
+          "DevOps Engineer": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1_score": 1.0,
+            "support": 93
+          },
+          "Frontend Developer": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1_score": 1.0,
+            "support": 91
+          },
+          "Full Stack Developer": {
+            "precision": 0.9884,
+            "recall": 1.0,
+            "f1_score": 0.9942,
+            "support": 85
+          },
+          "Machine Learning Engineer": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1_score": 1.0,
+            "support": 87
+          }
+        }
+      },
+      {
+        "model_name": "Random Forest Classifier",
+        "accuracy": 0.9943,
+        "precision": 0.9943,
+        "recall": 0.9943,
+        "f1_score": 0.9943,
+        "confusion_matrix": {
+          "labels": [
+            "Backend Developer",
+            "Business Analyst",
+            "Data Analyst",
+            "Data Scientist",
+            "DevOps Engineer",
+            "Frontend Developer",
+            "Full Stack Developer",
+            "Machine Learning Engineer"
+          ],
+          "matrix": [
+            [
+              82,
+              0,
+              0,
+              0,
+              0,
+              0,
+              1,
+              0
+            ],
+            [
+              0,
+              90,
+              1,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              84,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              86,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              93,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              91,
+              0,
+              0
+            ],
+            [
+              1,
+              1,
+              0,
+              0,
+              0,
+              0,
+              83,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              87
+            ]
+          ]
+        },
+        "per_class_metrics": {
+          "Backend Developer": {
+            "precision": 0.988,
+            "recall": 0.988,
+            "f1_score": 0.988,
+            "support": 83
+          },
+          "Business Analyst": {
+            "precision": 0.989,
+            "recall": 0.989,
+            "f1_score": 0.989,
+            "support": 91
+          },
+          "Data Analyst": {
+            "precision": 0.9882,
+            "recall": 1.0,
+            "f1_score": 0.9941,
+            "support": 84
+          },
+          "Data Scientist": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1_score": 1.0,
+            "support": 86
+          },
+          "DevOps Engineer": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1_score": 1.0,
+            "support": 93
+          },
+          "Frontend Developer": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1_score": 1.0,
+            "support": 91
+          },
+          "Full Stack Developer": {
+            "precision": 0.9881,
+            "recall": 0.9765,
+            "f1_score": 0.9822,
+            "support": 85
+          },
+          "Machine Learning Engineer": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1_score": 1.0,
+            "support": 87
+          }
+        }
+      },
+      {
+        "model_name": "XGBoost Classifier",
+        "accuracy": 0.9886,
+        "precision": 0.9886,
+        "recall": 0.9886,
+        "f1_score": 0.9886,
+        "confusion_matrix": {
+          "labels": [
+            "Backend Developer",
+            "Business Analyst",
+            "Data Analyst",
+            "Data Scientist",
+            "DevOps Engineer",
+            "Frontend Developer",
+            "Full Stack Developer",
+            "Machine Learning Engineer"
+          ],
+          "matrix": [
+            [
+              82,
+              0,
+              0,
+              0,
+              0,
+              0,
+              1,
+              0
+            ],
+            [
+              0,
+              89,
+              2,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              1,
+              0,
+              82,
+              1,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              86,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              93,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              90,
+              1,
+              0
+            ],
+            [
+              1,
+              1,
+              0,
+              0,
+              0,
+              0,
+              83,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              87
+            ]
+          ]
+        },
+        "per_class_metrics": {
+          "Backend Developer": {
+            "precision": 0.9762,
+            "recall": 0.988,
+            "f1_score": 0.982,
+            "support": 83
+          },
+          "Business Analyst": {
+            "precision": 0.9889,
+            "recall": 0.978,
+            "f1_score": 0.9834,
+            "support": 91
+          },
+          "Data Analyst": {
+            "precision": 0.9762,
+            "recall": 0.9762,
+            "f1_score": 0.9762,
+            "support": 84
+          },
+          "Data Scientist": {
+            "precision": 0.9885,
+            "recall": 1.0,
+            "f1_score": 0.9942,
+            "support": 86
+          },
+          "DevOps Engineer": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1_score": 1.0,
+            "support": 93
+          },
+          "Frontend Developer": {
+            "precision": 1.0,
+            "recall": 0.989,
+            "f1_score": 0.9945,
+            "support": 91
+          },
+          "Full Stack Developer": {
+            "precision": 0.9765,
+            "recall": 0.9765,
+            "f1_score": 0.9765,
+            "support": 85
+          },
+          "Machine Learning Engineer": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1_score": 1.0,
+            "support": 87
+          }
+        }
+      }
+    ],
+    "best_model_name": "Logistic Regression (Baseline)",
+    "best_f1_score": 0.9986,
+    "top_features": [
+      {
+        "feature": "skill_docker",
+        "importance": 0.6672
+      },
+      {
+        "feature": "skill_fastapi",
+        "importance": 0.6565
+      },
+      {
+        "feature": "skill_python",
+        "importance": 0.6163
+      },
+      {
+        "feature": "skill_data visualization",
+        "importance": 0.6011
+      },
+      {
+        "feature": "skill_pandas",
+        "importance": 0.5957
+      },
+      {
+        "feature": "skill_sql",
+        "importance": 0.559
+      },
+      {
+        "feature": "skill_statistics",
+        "importance": 0.5415
+      },
+      {
+        "feature": "skill_nodejs",
+        "importance": 0.5325
+      },
+      {
+        "feature": "skill_git",
+        "importance": 0.5195
+      },
+      {
+        "feature": "skill_scikit-learn",
+        "importance": 0.519
+      },
+      {
+        "feature": "skill_machine learning",
+        "importance": 0.5178
+      },
+      {
+        "feature": "skill_data cleaning",
+        "importance": 0.4904
+      },
+      {
+        "feature": "skill_react",
+        "importance": 0.4814
+      },
+      {
+        "feature": "assessment_web",
+        "importance": 0.4693
+      },
+      {
+        "feature": "skill_rest apis",
+        "importance": 0.4619
+      },
+      {
+        "feature": "skill_responsive design",
+        "importance": 0.4581
+      },
+      {
+        "feature": "skill_html",
+        "importance": 0.4524
+      },
+      {
+        "feature": "skill_deep learning",
+        "importance": 0.4454
+      },
+      {
+        "feature": "skill_typescript",
+        "importance": 0.4379
+      },
+      {
+        "feature": "skill_excel",
+        "importance": 0.4375
+      }
+    ],
+    "classes": [
+      "Backend Developer",
+      "Business Analyst",
+      "Data Analyst",
+      "Data Scientist",
+      "DevOps Engineer",
+      "Frontend Developer",
+      "Full Stack Developer",
+      "Machine Learning Engineer"
+    ]
+  },
+  "regression": {
+    "models_evaluated": [
+      {
+        "model_name": "Linear Regression (Baseline)",
+        "mae": 0.8208,
+        "rmse": 1.0388,
+        "r2_score": 0.8917,
+        "sample_count": 700,
+        "mean_actual": 17.31,
+        "mean_predicted": 17.33
+      },
+      {
+        "model_name": "Random Forest Regressor",
+        "mae": 1.0337,
+        "rmse": 1.3415,
+        "r2_score": 0.8194,
+        "sample_count": 700,
+        "mean_actual": 17.31,
+        "mean_predicted": 17.36
+      },
+      {
+        "model_name": "XGBoost Regressor",
+        "mae": 0.8867,
+        "rmse": 1.1483,
+        "r2_score": 0.8677,
+        "sample_count": 700,
+        "mean_actual": 17.31,
+        "mean_predicted": 17.35
+      }
+    ],
+    "best_model_name": "Linear Regression (Baseline)",
+    "best_r2_score": 0.8917,
+    "top_features": [
+      {
+        "feature": "years_experience",
+        "importance": 1.9666
+      },
+      {
+        "feature": "skill_machine learning",
+        "importance": 0.929
+      },
+      {
+        "feature": "skill_scikit-learn",
+        "importance": 0.8197
+      },
+      {
+        "feature": "skill_deep learning",
+        "importance": 0.7448
+      },
+      {
+        "feature": "skill_docker",
+        "importance": 0.6985
+      },
+      {
+        "feature": "skill_tensorflow",
+        "importance": 0.5547
+      },
+      {
+        "feature": "degree_Data Science MS",
+        "importance": 0.5374
+      },
+      {
+        "feature": "skill_pytorch",
+        "importance": 0.5198
+      },
+      {
+        "feature": "degree_M.Tech CS",
+        "importance": 0.5021
+      },
+      {
+        "feature": "location_Bangalore",
+        "importance": 0.4889
+      },
+      {
+        "feature": "degree_B.Sc CS",
+        "importance": 0.4641
+      },
+      {
+        "feature": "location_Remote",
+        "importance": 0.4603
+      },
+      {
+        "feature": "skill_git",
+        "importance": 0.4595
+      },
+      {
+        "feature": "skill_feature engineering",
+        "importance": 0.4554
+      },
+      {
+        "feature": "skill_aws",
+        "importance": 0.4517
+      },
+      {
+        "feature": "certifications_count",
+        "importance": 0.4474
+      },
+      {
+        "feature": "skill_numpy",
+        "importance": 0.434
+      },
+      {
+        "feature": "projects_count",
+        "importance": 0.424
+      },
+      {
+        "feature": "skill_sql",
+        "importance": 0.3896
+      },
+      {
+        "feature": "skill_linux",
+        "importance": 0.3819
+      }
+    ]
+  }
+}
